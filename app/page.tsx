@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { Phone, ShieldCheck, BadgeCheck, Clock, Star } from 'lucide-react'
+import { ShieldCheck, BadgeCheck, Clock, Star } from 'lucide-react'
 import { SiteHeader } from '@/components/site-header'
 import { LeadForm } from '@/components/lead-form'
 import { Stars } from '@/components/stars'
@@ -38,37 +38,6 @@ export default function Page() {
   return (
     <div id="top" className="min-h-screen bg-background">
       <SiteHeader />
-
-      {/* Announcement bar */}
-      <div className="bg-accent text-accent-foreground">
-        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-x-4 gap-y-1.5 px-4 py-2 text-[13px] font-bold sm:px-6 sm:text-sm">
-          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1">
-            <span className="inline-flex items-center gap-1.5">
-              <Stars className="h-3.5 w-3.5" />
-              <span>5.0</span>
-              <span className="font-medium text-accent-foreground/80">· 21 Reviews</span>
-            </span>
-            <span className="hidden items-center gap-1.5 sm:inline-flex">
-              <Clock className="h-3.5 w-3.5" aria-hidden="true" />
-              Available 24/7 For Quotes
-            </span>
-            <span className="hidden items-center gap-1.5 md:inline-flex">
-              <ShieldCheck className="h-3.5 w-3.5" aria-hidden="true" />
-              Licensed &amp; Fully Insured
-            </span>
-            <span className="hidden items-center gap-1.5 lg:inline-flex">
-              <BadgeCheck className="h-3.5 w-3.5" aria-hidden="true" />
-              FREE Roof Inspection &amp; Written Quote
-            </span>
-          </div>
-          <a
-            href="tel:+61242177737"
-            className="inline-flex items-center gap-1.5 rounded-full bg-accent-foreground/10 px-3 py-1 transition-colors hover:bg-accent-foreground/20"
-          >
-            <Phone className="h-3.5 w-3.5" aria-hidden="true" /> (02) 4217 7737
-          </a>
-        </div>
-      </div>
 
       {/* HERO: everything above the fold */}
       <section className="relative overflow-hidden">

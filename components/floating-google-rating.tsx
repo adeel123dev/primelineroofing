@@ -12,7 +12,7 @@ export function FloatingGoogleRating() {
 
   return (
     <div className="fixed bottom-8 left-8 z-40 animate-in fade-in slide-in-from-left-4 duration-500">
-      <div className="relative bg-white rounded-2xl shadow-2xl border border-gray-100 p-4 w-64 hover:shadow-3xl transition-shadow">
+      <div className="relative bg-white rounded-2xl border border-accent/30 p-4 w-64 transition-shadow btn-pulse" style={{ boxShadow: '0 8px 32px -4px rgb(0 0 0 / 0.18)' }}>
         {/* Close Button */}
         <button
           onClick={() => setIsVisible(false)}
