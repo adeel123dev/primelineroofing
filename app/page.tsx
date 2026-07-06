@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import { Phone, ShieldCheck, BadgeCheck, Clock, Star } from 'lucide-react'
 import { SiteHeader } from '@/components/site-header'
-import { MobileBar } from '@/components/mobile-bar'
 import { LeadForm } from '@/components/lead-form'
 import { Stars } from '@/components/stars'
 import { GoogleLogo } from '@/components/google-logo'
@@ -37,7 +36,7 @@ const usps = [
 
 export default function Page() {
   return (
-    <div id="top" className="min-h-screen bg-background pb-16 md:pb-0">
+    <div id="top" className="min-h-screen bg-background">
       <SiteHeader />
 
       {/* Announcement bar */}
@@ -170,7 +169,6 @@ export default function Page() {
       <FinalCta />
       <SiteFooter />
 
-      <MobileBar />
       <StickyCta />
       <FloatingGoogleRating />
     </div>
