@@ -11,40 +11,31 @@ export function FloatingGoogleRating() {
   if (!isVisible) return null
 
   return (
-    <div className="fixed bottom-8 left-8 z-40 animate-in fade-in slide-in-from-left-4 duration-500">
-      <div className="relative bg-white rounded-2xl border border-accent/30 p-4 w-64 transition-shadow btn-pulse" style={{ boxShadow: '0 8px 32px -4px rgb(0 0 0 / 0.18)' }}>
-        {/* Close Button */}
+    <div className="fixed bottom-24 left-3 z-40 animate-in fade-in slide-in-from-left-4 duration-500 sm:bottom-8 sm:left-6">
+      <div
+        className="relative flex items-center gap-2 rounded-full bg-white pl-2 pr-8 py-1.5 btn-pulse border border-accent/25"
+        style={{ boxShadow: '0 4px 20px -2px rgb(0 0 0 / 0.15)' }}
+      >
+        {/* Close */}
         <button
           onClick={() => setIsVisible(false)}
-          className="absolute top-2 right-2 p-1.5 hover:bg-gray-100 rounded-full transition-colors"
-          aria-label="Close"
+          className="absolute right-2 top-1/2 -translate-y-1/2 p-0.5 hover:bg-gray-100 rounded-full transition-colors"
+          aria-label="Close Google rating"
         >
-          <X className="h-3.5 w-3.5 text-gray-400" />
+          <X className="h-3 w-3 text-gray-400" />
         </button>
 
-        {/* Content */}
-        <div className="flex items-start gap-3 pt-0.5">
-          {/* Google Logo */}
-          <div className="flex-shrink-0 mt-0.5">
-            <GoogleLogo className="h-8 w-8" />
-          </div>
+        {/* Google G */}
+        <GoogleLogo className="h-5 w-5 shrink-0" />
 
-          {/* Text Content */}
-          <div className="flex-1 min-w-0">
-            <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide leading-none mb-1">
-              Google Rating
-            </p>
+        {/* Score */}
+        <span className="text-sm font-extrabold text-gray-900 leading-none">5.0</span>
 
-            {/* Score + Stars */}
-            <div className="flex items-center gap-1.5">
-              <span className="text-xl font-bold text-gray-900 leading-none">5.0</span>
-              <Stars className="h-4 w-4" />
-            </div>
+        {/* Stars */}
+        <Stars className="h-3.5 w-3.5" />
 
-            {/* Review Count */}
-            <p className="text-xs text-gray-500 mt-1">Based on 21 reviews</p>
-          </div>
-        </div>
+        {/* Count */}
+        <span className="text-xs text-gray-500 leading-none pr-1">21 reviews</span>
       </div>
     </div>
   )

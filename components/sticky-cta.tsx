@@ -20,16 +20,16 @@ export function StickyCta() {
       role="complementary"
       aria-label="Quick actions"
     >
-      <div className="flex flex-row items-center gap-1 rounded-full bg-foreground p-1.5 shadow-2xl shadow-black/40">
+      <div className="flex flex-row items-center gap-1 rounded-full bg-foreground p-1.5 shadow-2xl shadow-black/40 w-max max-w-[calc(100vw-2rem)]">
         <a
           href="#quote-form"
-          className="btn-pulse whitespace-nowrap inline-flex items-center justify-center rounded-full bg-accent px-5 py-2.5 text-sm font-extrabold text-accent-foreground transition-transform hover:scale-[1.03] active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-foreground"
+          className="btn-pulse whitespace-nowrap inline-flex items-center justify-center rounded-full bg-accent px-4 py-2 text-sm font-extrabold text-accent-foreground transition-transform hover:scale-[1.03] active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-foreground sm:px-6 sm:py-2.5"
         >
           Get A Free Quote
         </a>
         <a
           href="#services"
-          className="whitespace-nowrap inline-flex items-center justify-center rounded-full bg-card px-5 py-2.5 text-sm font-bold text-foreground transition-colors hover:bg-muted active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border focus-visible:ring-offset-2 focus-visible:ring-offset-foreground"
+          className="whitespace-nowrap inline-flex items-center justify-center rounded-full bg-card px-4 py-2 text-sm font-bold text-foreground transition-colors hover:bg-muted active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border focus-visible:ring-offset-2 focus-visible:ring-offset-foreground sm:px-6 sm:py-2.5"
         >
           View Services
         </a>

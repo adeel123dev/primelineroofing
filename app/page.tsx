@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { ShieldCheck, BadgeCheck, Clock, Star } from 'lucide-react'
+import { ShieldCheck, BadgeCheck, Clock, Star, Phone } from 'lucide-react'
 import { SiteHeader } from '@/components/site-header'
 import { LeadForm } from '@/components/lead-form'
 import { Stars } from '@/components/stars'
@@ -37,6 +37,36 @@ const usps = [
 export default function Page() {
   return (
     <div id="top" className="min-h-screen bg-background">
+      {/* Announcement bar */}
+      <div className="bg-foreground text-background">
+        <div className="mx-auto flex max-w-6xl items-center justify-between gap-x-3 px-4 py-2 sm:px-6">
+          {/* Left pills */}
+          <div className="flex min-w-0 items-center gap-2 overflow-hidden">
+            <span className="hidden shrink-0 items-center gap-1.5 rounded-full border border-accent/40 bg-accent/10 px-2.5 py-0.5 text-[11px] font-bold uppercase tracking-wide text-accent sm:inline-flex">
+              <ShieldCheck className="h-3 w-3" aria-hidden="true" />
+              Licensed &amp; Insured
+            </span>
+            <span className="hidden shrink-0 items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-2.5 py-0.5 text-[11px] font-bold uppercase tracking-wide text-background/80 md:inline-flex">
+              <BadgeCheck className="h-3 w-3 text-accent" aria-hidden="true" />
+              FREE Roof Inspection
+            </span>
+            <span className="inline-flex shrink-0 items-center gap-1.5 text-[11px] font-medium text-background/70 sm:text-xs">
+              <Clock className="h-3 w-3 text-accent shrink-0" aria-hidden="true" />
+              Quotes in 24hrs
+            </span>
+          </div>
+
+          {/* Right: phone */}
+          <a
+            href="tel:+61242177737"
+            className="shrink-0 inline-flex items-center gap-1.5 rounded-full bg-accent px-3 py-1 text-[11px] font-extrabold text-accent-foreground transition-colors hover:bg-accent/90 sm:text-xs"
+          >
+            <Phone className="h-3 w-3" aria-hidden="true" />
+            (02) 4217 7737
+          </a>
+        </div>
+      </div>
+
       <SiteHeader />
 
       {/* HERO: everything above the fold */}
